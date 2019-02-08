@@ -10,3 +10,6 @@ For more Info: [Apple.com/Swift](https://developer.apple.com/swift/)
 ### Step 1
 Open xcode.
 ![First Page](https://github.com/AshishProjects/SwiftAreaPerimeterCalculator/raw/master/ScreenShots/1.png)
+
+### Choose The Single View template
+![choose template](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/2.png)
