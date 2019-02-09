@@ -9,18 +9,18 @@ For more Info: [Apple.com/Swift](https://developer.apple.com/swift/)
 
 ### Step 1
 Open xcode.
-![First Page](https://github.com/AshishProjects/SwiftAreaPerimeterCalculator/raw/master/ScreenShots/1.png)
+![First Page](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/a.png)
 
 ### Choose The Single View template
-![choose template](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/2.png)
+![choose template](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/b.png)
 
 ### Enter the ProductName. Like I have written AreaPerimeterCalculator in ProductName. 
 SignIn your apple Id to get team name. Select the language, Swift or C#. Then click on Next.
-![Add Required fields](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/3.png)
+![Add Required fields](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/c.png)
 
 ###  We are ready to start creating our application.
 This is the first screen you will see after entering all details. Go to MainStoryBoard to start designing the applications.
-![FirstScreen to start](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![FirstScreen to start](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/d.png)
 
 ### MainStoryBoard overview 1: 
     In here you can select the screen size of the mobile you want to work on. 
@@ -28,7 +28,7 @@ This is the first screen you will see after entering all details. Go to MainStor
     requirements.
 (2) On the right side below, you can add different objects(Buttons,TextFileds,labels etc). 
 (3) Different tabs which will help us to create proper design.
-![MainStoryBoard Essential Overview:1](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![MainStoryBoard Essential Overview:1](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/e.png)
 
 ### MainStoryBoard overview 2: f
 (1) This is the navigation menu where we can navigate to different files.
@@ -36,42 +36,42 @@ This is the first screen you will see after entering all details. Go to MainStor
     process.
     We can choose which simulator or phycical device we want to use.
 (3) We can choose the layout we want to do our designing from the list of different devices.    
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/f.png)
 
 ### Adding Button in layout: h
 (1) Search for button in the filter search and then drag the button on the layout.
 (2) Create buttton like these. Double-click on button to edit the name.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Add buttons](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/h.png)
 
 ### Adding Labes:g
-(1) Search for button in the filter search and then drag the button on the layout.
+(1) Search for Layout in the filter search and then drag the button on the layout.
 (2) Create 4 buttons like this.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Layout](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/g.png)
 
 ### Adding TextFields And looking at labes: i
 (1) Search for text field in the filter and drag it to the layout.
 (2) Base, Height asre the labes which i have added opposite to teh textfields.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![textFields and Labels](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/i.png)
 
 ### Button color and Atribte isspectors:j
 (1)  Select the button Square, one at the bottom. In the inspector window, select the forth icon Atribute inspector. Go to          background under View.
      click on the white box and select Custome.You will get the color drop-box. Select the background color
      of your choice.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Button and colors](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/j.png)
 
-### TextFields and Properties:k
+### TextFields and Properties:
 (1) In the attribute inspector go to the Text input Traits. Choose keyboard type to number pad.
 (2) Type "Values" in Placeholder 
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Textfields and properties](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/k.png)
 
-### Mobile View: mobileview1 (desktop)
+### Mobile View:
 (1) Click on the play icon to build the project. And you will get a view something like this.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Mobile Views-1](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/mobileFirstView.png)
 
 ### Connecting TextFields with using assistance editor: TextFiel Connection.
 (1) Open the assistance editor form the top right corner. Select the textField, press control and click left-button of the mouse and drag it toward the assistance editor. Select outlset option and specify the name of the outlet. 
 
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Connecting TextFields with using assistance](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/TextFieldConnections.png)
 
 ### Code Ecample
 
@@ -84,7 +84,7 @@ This is the first screen you will see after entering all details. Go to MainStor
 ### Connecting other button and labels the same way:ShapeField
 (1) When the drop box appear select action for all the buttons and specify their names.
 (2) Again select the buttons and this time select the Outlet option and specify the names. Thus, creating UIButtons.
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Connecting other objects](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/ShapesFieldsConnections.png)
 
    ### Code Examples
     ``` codes
@@ -95,7 +95,7 @@ This is the first screen you will see after entering all details. Go to MainStor
 
 ### After connecting all the objects this is what we are going to get.:AllConnections
 
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Connections](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/AllConnections.png)
 
    ### Code Example
 ``` 
@@ -141,7 +141,7 @@ This is the first screen you will see after entering all details. Go to MainStor
     etc which we will you in creating the code
     
     
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Different Variables](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/AllConnections.png)
 
    ### Code Example
 
@@ -308,11 +308,13 @@ This is the first screen you will see after entering all details. Go to MainStor
  
  ### Mobile View: Enter value to get Perimeter of Circle -  CalcCircle Perimeter
  
- ![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+ ![Circle Perimeter 1](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/EnterValueToGetPerimeterOfCircle.png)
  
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+![Circle Perimeter 2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/CalcCirclePerimeter.png)
 
 ### Errors
+![Errors](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShotsNew/errors.png)
+
 You might come across errors like
 #### Can't find keyplane that supports type 4 for keyboard iPhone-PortraitTruffle-NumberPad; using 20615_PortraitTruffle_iPhone-Simple-Pad_Default
 
