@@ -13,3 +13,201 @@ Open xcode.
 
 ### Choose The Single View template
 ![choose template](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/2.png)
+
+### Enter the ProductName. Like I have written AreaPerimeterCalculator in ProductName. 
+SignIn your apple Id to get team name. Select the language, Swift or C#. Then click on Next.
+![Add Required fields](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/3.png)
+
+###  We are ready to start creating our application.
+This is the first screen you will see after entering all details. Go to MainStoryBoard to start designing the applications.
+![FirstScreen to start](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### MainStoryBoard overview 1: 
+    In here you can select the screen size of the mobile you want to work on. 
+(1) At the center is the blank screen where we will add different objects as per your
+    requirements.
+(2) On the right side below, you can add different objects(Buttons,TextFileds,labels etc). 
+(3) Different tabs which will help us to create proper design.
+![MainStoryBoard Essential Overview:1](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### MainStoryBoard overview 2: f
+(1) This is the navigation menu where we can navigate to different files.
+(2) Play button is use to run the application in Simulator ot Physical device whereas Stop is use to terminate the 
+    process.
+    We can choose which simulator or phycical device we want to use.
+(3) We can choose the layout we want to do our designing from the list of different devices.    
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Adding Button in layout: h
+(1) Search for button in the filter search and then drag the button on the layout.
+(2) Create buttton like these. Double-click on button to edit the name.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Adding Labes:g
+(1) Search for button in the filter search and then drag the button on the layout.
+(2) Create 4 buttons like this.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Adding TextFields And looking at labes: i
+(1) Search for text field in the filter and drag it to the layout.
+(2) Base, Height asre the labes which i have added opposite to teh textfields.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Button color and Atribte isspectors:j
+(1)  Select the button Square, one at the bottom. In the inspector window, select the forth icon Atribute inspector. Go to          background under View.
+     click on the white box and select Custome.You will get the color drop-box. Select the background color
+     of your choice.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### TextFields and Properties:k
+(1) In the attribute inspector go to the Text input Traits. Choose keyboard type to number pad.
+(2) Type "Values" in Placeholder 
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Mobile View: mobileview1 (desktop)
+(1) Click on the play icon to build the project. And you will get a view something like this.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Connecting TextFields with using assistance editor: TextFiel Connection.
+(1) Open the assistance editor form the top right corner. Select the textField, press control and click left-button of the mouse and drag it toward the assistance editor. Select outlset option and specify the name of the outlet. 
+     
+    ### Code example
+      
+   ``` Code
+   @IBOutlet weak var HeightValue: UITextField!
+    @IBOutlet weak var BaseValue: UITextField!
+    ```
+         
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Connecting other button and labels the same way:ShapeField
+(1) When the drop box appear select action for all the buttons and specify their names.
+(2) Again select the buttons and this time select the Outlet option and specify the names. Thus, creating UIButtons.
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+   ### Code Examples
+    ``` codes
+    @IBOutlet weak var SquareButtons: UIButton!
+    @IBOutlet weak var RectangleButtons: UIButton!
+    @IBOutlet weak var TriangleButtons: UIButton!
+    @IBOutlet weak var CircleButtons: UIButton!
+    ```
+
+### After connecting all the objects this is what we are going to get.:AllConnections
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+    ### Code Example
+   ```          //    Shapes buttons connnections
+    @IBOutlet weak var SquareButtons: UIButton!
+    @IBOutlet weak var RectangleButtons: UIButton!
+    @IBOutlet weak var TriangleButtons: UIButton!
+    @IBOutlet weak var CircleButtons: UIButton!
+    
+    //    Find buttons connections
+    @IBOutlet weak var AreaButtons: UIButton!
+    @IBOutlet weak var PerimeterButtons: UIButton!
+    
+    @IBOutlet weak var ResultCalc: UIButton!
+    
+//    labes connections
+    @IBOutlet weak var BaseLabelValues: UILabel!
+    @IBOutlet weak var HeightLabelValues: UILabel!
+    @IBOutlet weak var ResultLabelCalc: UILabel!
+    
+    
+//    text field connection
+    @IBOutlet weak var HeightValue: UITextField!
+    @IBOutlet weak var BaseValue: UITextField!
+    
+ // Buttions Actions connection
+    @IBAction func SquareButtonFun(_ sender: Any)
+    @IBAction func RectangleButtonFun(_ sender: Any)
+    @IBAction func TriangleButtonFun(_ sender: Any) 
+    @IBAction func AreaButtonFun(_ sender: Any)
+    ```
+    
+### Defining variables for calculations: AllConnections
+(1) I have defined variavled 
+  ``` code 
+  var BaseNumberValue:Double=0;
+    var heightNumberVakue:Double=0 
+    ```
+    etc which we will you in creating the code
+    
+    
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+
+      ### Code Example of variables
+         
+    ``` code
+    var BaseNumberValue:Double=0;
+    var heightNumberVakue:Double=0;
+    var CalculatedAns:Double=0;
+    ```
+    we will use these variable to do calculaions. They are all in Data type Double
+    
+    ```code
+    var shapeSelectedSquare = false;
+    var shapeSelectedRectangle = false;
+    var shapeSelectedTriangle = false;
+    var shapeSelectedCircle = false;
+    var findSelectedArea = false;
+    var findSelectedParameter = false;
+    ```
+    we will use ShapeSelectedSquare and other variable to check which button is pressed.
+    They are all in Data Type boolean.
+   
+
+### Selecting Shapes and Find by changing their background color from white to red
+   
+   We will change the background color of the button using
+   
+   #### yourButtonName.backgroundColor = UIColor.colorName;
+   
+   here is how you will write it in the button action function
+     ```
+     @IBAction func CircleButtonFun(_ sender: Any) {
+        SquareButtons.backgroundColor = UIColor.white;
+        
+        RectangleButtons.backgroundColor = UIColor.white;
+        
+        TriangleButtons.backgroundColor = UIColor.white;
+        
+        CircleButtons.backgroundColor = UIColor.red;
+        (changing Circle button color and keepng other white)
+       }
+       ```
+       
+
+### Adding Conditions  on Calculate button clicked
+  
+  Each shape has different formulas to get area and perimeter. We will specify unique formual of each shapes
+  according to selected shape and find (Area or Perimeter)
+  
+  Here,is an example of finding area of square.
+  ```
+  if(shapeSelectedSquare == true && findSelectedArea == true)
+        {
+            
+            if(BaseValue.text != "" && HeightValue.text != "")
+            {
+                BaseNumberValue = Double(BaseValue.text!)!
+                
+                heightNumberVakue = Double(HeightValue.text!)!
+                
+                CalculatedAns = BaseNumberValue * heightNumberVakue;
+                ResultCalc.text = String(CalculatedAns);
+                
+                BaseValue.text = "";    we are 
+                HeightValue.text = "";
+                BaseNumberValue = 0;
+                heightNumberVakue = 0;
+                
+                
+            }
+        }
+  ```
+  Just like this we will add different conditions according to our requirements and formulas 
+  
+
