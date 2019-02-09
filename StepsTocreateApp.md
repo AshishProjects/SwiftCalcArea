@@ -70,15 +70,16 @@ This is the first screen you will see after entering all details. Go to MainStor
 
 ### Connecting TextFields with using assistance editor: TextFiel Connection.
 (1) Open the assistance editor form the top right corner. Select the textField, press control and click left-button of the mouse and drag it toward the assistance editor. Select outlset option and specify the name of the outlet. 
-     
-    ### Code example
-      
+
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Code Ecample
+
    ``` Code
    @IBOutlet weak var HeightValue: UITextField!
     @IBOutlet weak var BaseValue: UITextField!
-    ```
-         
-![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+```
 
 ### Connecting other button and labels the same way:ShapeField
 (1) When the drop box appear select action for all the buttons and specify their names.
@@ -90,14 +91,17 @@ This is the first screen you will see after entering all details. Go to MainStor
     @IBOutlet weak var SquareButtons: UIButton!
     @IBOutlet weak var RectangleButtons: UIButton!
     @IBOutlet weak var TriangleButtons: UIButton!
-    @IBOutlet weak var CircleButtons: UIButton!
-    ```
+    @IBOutlet weak var CircleButtons: UIButton!```  
 
 ### After connecting all the objects this is what we are going to get.:AllConnections
+
 ![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
 
-    ### Code Example
-   ```          //    Shapes buttons connnections
+   ### Code Example
+``` 
+
+    //    Shapes buttons connnections
+   
     @IBOutlet weak var SquareButtons: UIButton!
     @IBOutlet weak var RectangleButtons: UIButton!
     @IBOutlet weak var TriangleButtons: UIButton!
@@ -109,36 +113,38 @@ This is the first screen you will see after entering all details. Go to MainStor
     
     @IBOutlet weak var ResultCalc: UIButton!
     
-//    labes connections
+   //    labes connections
     @IBOutlet weak var BaseLabelValues: UILabel!
     @IBOutlet weak var HeightLabelValues: UILabel!
     @IBOutlet weak var ResultLabelCalc: UILabel!
     
     
-//    text field connection
+   //    text field connection
     @IBOutlet weak var HeightValue: UITextField!
     @IBOutlet weak var BaseValue: UITextField!
     
- // Buttions Actions connection
+   // Buttions Actions connection
     @IBAction func SquareButtonFun(_ sender: Any)
     @IBAction func RectangleButtonFun(_ sender: Any)
     @IBAction func TriangleButtonFun(_ sender: Any) 
     @IBAction func AreaButtonFun(_ sender: Any)
-    ```
+    
+```
     
 ### Defining variables for calculations: AllConnections
 (1) I have defined variavled 
-  ``` code 
-  var BaseNumberValue:Double=0;
+
+   ```
+   var BaseNumberValue:Double=0;
     var heightNumberVakue:Double=0 
-    ```
+   ```
     etc which we will you in creating the code
     
     
 ![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
 
+   ### Code Example
 
-      ### Code Example of variables
          
     ``` code
     var BaseNumberValue:Double=0;
@@ -166,6 +172,7 @@ This is the first screen you will see after entering all details. Go to MainStor
    #### yourButtonName.backgroundColor = UIColor.colorName;
    
    here is how you will write it in the button action function
+   
      ```
      @IBAction func CircleButtonFun(_ sender: Any) {
         SquareButtons.backgroundColor = UIColor.white;
@@ -177,15 +184,18 @@ This is the first screen you will see after entering all details. Go to MainStor
         CircleButtons.backgroundColor = UIColor.red;
         (changing Circle button color and keepng other white)
        }
-       ```
+     ```
+     
+       
        
 
-### Adding Conditions  on Calculate button clicked
+### Adding Conditions on Calculate button clicked
   
   Each shape has different formulas to get area and perimeter. We will specify unique formual of each shapes
   according to selected shape and find (Area or Perimeter)
   
   Here,is an example of finding area of square.
+  
   ```
   if(shapeSelectedSquare == true && findSelectedArea == true)
         {
@@ -207,7 +217,124 @@ This is the first screen you will see after entering all details. Go to MainStor
                 
             }
         }
+
   ```
+    
   Just like this we will add different conditions according to our requirements and formulas 
   
+  Here, is some more examples
+  
+  ```
+  else if(shapeSelectedRectangle == true && findSelectedArea == true)
+        {
+            
+            if(BaseValue.text != "" && HeightValue.text != "")
+            {
+                BaseNumberValue = Double(BaseValue.text!)!
+                
+                heightNumberVakue = Double(HeightValue.text!)!
+                
+                CalculatedAns = BaseNumberValue * heightNumberVakue;
+                ResultCalc.text = String(CalculatedAns);
+                
+                
+                BaseValue.text = "";
+                HeightValue.text = "";
+                BaseNumberValue = 0;
+                heightNumberVakue = 0;
+                
+            }
+        }
 
+        
+        else if(shapeSelectedTriangle == true && findSelectedArea == true)
+        {
+            if(BaseValue.text != "" && HeightValue.text != "")
+            {
+                BaseNumberValue = Double(BaseValue.text!)!
+                
+                heightNumberVakue = Double(HeightValue.text!)!
+                
+                CalculatedAns = 0.5 * BaseNumberValue * heightNumberVakue;
+                ResultCalc.text = String(CalculatedAns);
+                
+                
+                BaseValue.text = "";
+                HeightValue.text = "";
+                BaseNumberValue = 0;
+                heightNumberVakue = 0;
+                
+            }
+        }
+        
+  
+  ```
+  
+ ### Changing the labes text according to the shapes requirements
+ 
+ Now, we will change to lables base and height text to sides for Square and radius for Circle
+  like 
+  ```
+  baseVale.text = "Radius";
+
+  ```
+  ### More Examples
+  
+  ```
+  @IBAction func SquareButtonFun(_ sender: Any) {
+        
+        RectangleButton.backgroundColor = UIColor.white;
+        
+        
+        SquareButton1.backgroundColor = UIColor.red;
+        
+        TriangleButton.backgroundColor = UIColor.white;
+        
+        CircleButton.backgroundColor = UIColor.white;
+        
+        shapeSelectedSquare = true;
+        
+        BaseLabelText.text = "Sides";   // here are changing base to side
+        HeightLabelText.text = "Sides";  // here are changing height to side
+        HeightLabelText.isHidden = false; 
+        HeightValue.isHidden = false;
+        
+        
+        
+    }
+  
+  ```
+ Similarly we will add conditions in other button action function according to rquirement.
+ 
+ ### Mobile View: Enter value to get Perimeter of Circle -  CalcCircle Perimeter
+ 
+ ![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+ 
+![MainStoryBoard Essential Overview:2](https://github.com/AshishProjects/SwiftCalcArea/raw/master/ScreenShots/4.png)
+
+### Errors
+You might come across errors like
+#### Can't find keyplane that supports type 4 for keyboard iPhone-PortraitTruffle-NumberPad; using 20615_PortraitTruffle_iPhone-Simple-Pad_Default
+
+It is sometimes due to the versions of xcode and devices.
+here is a link which will help you to understand and resolve the error
+[StackOverflow link](https://stackoverflow.com/questions/25842168/cant-find-keyplane-that-supports-type-4-for-keyboard-iphone-portrait-numberpad)
+OR
+
+#### invalidating cache xcode
+   Thhis is usually the cahche that don't let the application to get updated.
+   
+   [stackOverflow](https://stackoverflow.com/questions/5714372/how-to-empty-caches-and-clean-all-targets-xcode-4-and-later)
+
+ 
+ ### References
+ 
+ [Globalnerdy](http://www.globalnerdy.com/2015/04/27/how-to-program-an-ios-text-field-that-takes-only-numeric-input-or-specific-characters-with-a-maximum-length/)
+
+ [Change Button Background](How to shortly change button background when button is pressed? : iOSProgramming)
+ 
+ [Xcode tutorial](https://codewithchris.com/xcode-tutorial-user-interaction/)
+ 
+ [Adding tow number](https://www.youtube.com/watch?v=bkjYqy-Inro)
+
+[Youtube calculator App](https://www.youtube.com/watch?v=AG2QDwmj64A)
